@@ -1,0 +1,16 @@
+name: Use Reusable Workflow  
+   
+on:  
+  push:  
+    branches:  
+      - main  
+   
+jobs:  
+  use-template:  
+    runs-on: ubuntu-latest  
+  
+    steps:  
+      - name: Trigger Reusable Workflow  
+        uses: ./.github/workflows/my-template.yml  
+        with:  
+          param1: 'Hello, World!' 
